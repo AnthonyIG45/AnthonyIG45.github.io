@@ -58,3 +58,26 @@ input {
     font-size: 1.2rem;
     font-weight: bold;
 }
+
+.grade-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    justify-content: center;
+}
+
+.grade-row input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.cat-name { width: 150px; }
+.weight-input { width: 80px; }
+.score-input { width: 80px; }
+
+#resultDisplay {
+    font-size: 1.5rem;
+    color: #007BFF;
+    margin-top: 20px;
+}

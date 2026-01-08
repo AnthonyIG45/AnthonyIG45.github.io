@@ -19,3 +19,15 @@ body {
 #myButton:hover {
     background-color: #45a049;
 }
+
+input[type="text"] {
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none; /* Removes the default blue outline on click */
+}
+
+input[type="text"]:focus {
+    border-color: #007BFF; /* Changes color when user clicks inside */
+}

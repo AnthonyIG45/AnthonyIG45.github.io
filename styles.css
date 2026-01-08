@@ -1,104 +1,90 @@
 body {
-    background-color: #f0f2f5; /* Example background color */
-    font-family: sans-serif;
-    margin: 0;
-    padding: 0;
+    background-color: #f4f7f6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 40px;
     text-align: center;
 }
 
 .form-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 600px;
     text-align: center;
-    margin-top: 50px;
-    padding: 20px;
-}
-
-.input-group {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-label {
-    font-weight: bold;
-    margin-bottom: 8px;
-}
-
-input {
-    padding: 10px;
-    width: 200px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-#submitBtn {
-    background-color: #28a745;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-#clearBtn {
-    background-color: #dc3545;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-left: 10px;
-}
-
-#displayMessage {
-    margin-top: 20px;
-    font-size: 1.2rem;
-    font-weight: bold;
 }
 
 .grade-row {
     display: flex;
     gap: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
     align-items: center;
     justify-content: center;
 }
 
+input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.cat-name { flex: 2; }
+.weight-input, .score-input { flex: 1; width: 60px; }
+
 .remove-btn {
-    background-color: #ff4d4d;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 25px;
-    height: 25px;
+    background-color: #ffeded;
+    color: #dc3545;
+    border: 1px solid #dc3545;
+    border-radius: 6px;
     cursor: pointer;
     font-weight: bold;
+    padding: 8px 12px;
+    transition: 0.2s;
 }
 
-#addRowBtn {
-    background-color: #007BFF;
+.remove-btn:hover {
+    background-color: #dc3545;
     color: white;
-    padding: 10px;
+}
+
+.button-group {
+    margin-top: 25px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+button {
+    padding: 12px 18px;
     border: none;
-    border-radius: 4px;
+    border-radius: 6px;
     cursor: pointer;
+    font-weight: 600;
 }
 
-.grade-row input {
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
+.btn-primary { background-color: #007bff; color: white; }
+.btn-secondary { background-color: #6c757d; color: white; }
+.btn-danger { background-color: #dc3545; color: white; }
 
-.cat-name { width: 150px; }
-.weight-input { width: 80px; }
-.score-input { width: 80px; }
+.result-box {
+    margin-top: 30px;
+    padding: 15px;
+    background-color: #e9ecef;
+    border-radius: 8px;
+}
 
 #resultDisplay {
-    font-size: 1.5rem;
-    color: #007BFF;
-    margin-top: 20px;
+    font-size: 1.4rem;
+    margin: 0;
+    color: #333;
+}
+
+#weightWarning {
+    color: #856404;
+    display: block;
+    margin-top: 5px;
 }

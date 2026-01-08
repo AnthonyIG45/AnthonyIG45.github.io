@@ -10,18 +10,22 @@
     <p>This is a test. Thank You.</p>
 
     <div class="form-container">
-    <h2>Dynamic Grade Calculator</h2>
-    
-    <div id="grade-rows-container">
+        <h1>Grade Calculator</h1>
+        <p>Add rows for each category (Quizzes, Exams, etc.)</p>
+        
+        <div id="grade-rows-container">
+            </div>
+
+        <div class="button-group">
+            <button id="addRowBtn" class="btn-secondary">+ Add Category</button>
+            <button id="calculateBtn" class="btn-primary">Calculate Total</button>
+            <button id="clearBtn" class="btn-danger">Clear All</button>
         </div>
 
-    <div class="button-group">
-        <button id="addRowBtn">+ Add Category</button>
-        <button id="calculateBtn">Calculate Total</button>
-        <button id="clearBtn">Clear All</button>
-    </div>
-
-    <p id="resultDisplay">Total Grade: 0%</p>
+        <div class="result-box">
+            <p id="resultDisplay">Total Grade: 0.00%</p>
+            <small id="weightWarning"></small>
+        </div>
     </div>
 
     <script src="script.js"></script>

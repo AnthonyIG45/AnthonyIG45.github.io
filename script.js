@@ -6,7 +6,8 @@ button.addEventListener("click", function () {
 
 
 // Get references to the elements
-const inputField = document.getElementById('userInput');
+const inputField = document.getElementById('weight');
+const inputField2 = document.getElementById('total');
 const actionButton = document.getElementById('myButton');
 const message = document.getElementById('displayMessage');
 

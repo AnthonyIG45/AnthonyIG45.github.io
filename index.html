@@ -9,30 +9,37 @@
 </head>
 <body>
     <div class="form-container">
-        <h1>Grade Scanner & Calculator</h1>
-        
-        <div class="upload-section">
-            <div class="input-group">
-                <label>1. Syllabus (Weights)</label>
-                <input type="file" id="syllabusUpload" accept="image/*">
-            </div>
-            <div class="input-group">
-                <label>2. Gradebook (Scores)</label>
-                <input type="file" id="gradebookUpload" accept="image/*">
-            </div>
-            <button id="analyzeBtn" disabled>Analyze Documents</button>
+    <header class="main-header">
+        <h1>AI Grade Scanner</h1>
+        <p class="subtitle">Upload your documents to calculate your standing instantly.</p>
+    </header>
+    
+    <section class="outline-box upload-grid">
+        <div class="drop-zone">
+            <label for="syllabusUpload">Syllabus (Weights)</label>
+            <input type="file" id="syllabusUpload" accept="image/*">
         </div>
-
-        <div id="loading" class="hidden">Processing images... This may take a moment.</div>
-
-        <div id="resultsSection" class="hidden">
-            <h2>Detected Data</h2>
-            <div id="dataTables"></div>
-            <div class="result-box">
-                <h3 id="finalGradeDisplay">Final Calculated Grade: --</h3>
-            </div>
+        <div class="drop-zone">
+            <label for="gradebookUpload">Gradebook (Scores)</label>
+            <input type="file" id="gradebookUpload" accept="image/*">
         </div>
+    </section>
+
+    <button id="analyzeBtn" class="sleek-btn" disabled>Start Analysis</button>
+
+    <div id="loading" class="hidden">
+        <div class="spinner"></div>
+        <span>Extracting text via Tesseract...</span>
     </div>
+
+    <section id="resultsSection" class="hidden">
+        <div class="outline-box result-card">
+            <h2>Analysis Complete</h2>
+            <div id="finalGradeDisplay">0.00%</div>
+            <p id="weightWarning"></p>
+        </div>
+    </section>
+</div>
     <script src="script.js"></script>
 </body>
 </html>

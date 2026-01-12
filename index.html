@@ -8,35 +8,45 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
     <div class="form-container">
-    <header class="main-header">
-        <h1>AI Grade Scanner</h1>
-        <p class="subtitle">Upload images or enter data manually below.</p>
-    </header>
-    
-    <section class="outline-box upload-grid">
-        <div class="drop-zone">
-            <label>Syllabus (Weights)</label>
-            <input type="file" id="syllabusUpload" accept="image/*">
-        </div>
-        <div class="drop-zone">
-            <label>Gradebook (Scores)</label>
-            <input type="file" id="gradebookUpload" accept="image/*">
-        </div>
-        <button id="analyzeBtn" class="sleek-btn" disabled style="grid-column: span 2;">Auto-Fill from Images</button>
-    </section>
-
-    <section class="outline-box">
-        <div id="grade-rows-container">
+        <header class="main-header">
+            <h1>AI Grade Scanner</h1>
+            <p class="subtitle">Upload images or enter your data manually below.</p>
+        </header>
+        
+        <section class="outline-box upload-grid">
+            <div class="drop-zone">
+                <label>Syllabus (Weights)</label>
+                <input type="file" id="syllabusUpload" accept="image/*">
             </div>
-        <button id="addRowBtn" class="secondary-btn">+ Add Manual Category</button>
-    </section>
+            <div class="drop-zone">
+                <label>Gradebook (Scores)</label>
+                <input type="file" id="gradebookUpload" accept="image/*">
+            </div>
+            <button id="analyzeBtn" class="sleek-btn" disabled>Auto-Fill from Images</button>
+        </section>
 
-    <div class="action-zone">
-        <button id="calculateBtn" class="sleek-btn success">Calculate Final Grade</button>
-        <div id="resultDisplay" class="final-result">--%</div>
+        <div id="loading" class="hidden">
+            <div class="spinner"></div>
+            <p>Scanning documents... please wait.</p>
+        </div>
+
+        <section class="outline-box">
+            <div id="grade-rows-container">
+                </div>
+            <button id="addRowBtn" class="secondary-btn">+ Add Manual Category</button>
+        </section>
+
+        <div class="action-zone">
+            <button id="calculateBtn" class="sleek-btn success">Calculate Final Grade</button>
+            <div class="result-display-area">
+                <h2 id="finalGradeDisplay">--%</h2>
+                <p id="weightWarning"></p>
+            </div>
+        </div>
     </div>
-</div>
+
     <script src="script.js"></script>
 </body>
 </html>

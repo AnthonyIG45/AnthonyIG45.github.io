@@ -1,34 +1,38 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>AI Grade Scanner</title>
+    <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- <h1>Anthony Goines</h1> -->
-    <!-- <p>This is a test. Thank You.</p> -->
-
     <div class="form-container">
-        <h1>Grade Calculator</h1>
-        <p>Add rows for each category (Quizzes, Exams, etc.)</p>
+        <h1>Grade Scanner & Calculator</h1>
         
-        <div id="grade-rows-container">
+        <div class="upload-section">
+            <div class="input-group">
+                <label>1. Syllabus (Weights)</label>
+                <input type="file" id="syllabusUpload" accept="image/*">
             </div>
-
-        <div class="button-group">
-            <button id="addRowBtn" class="btn-secondary">+ Add Category</button>
-            <button id="calculateBtn" class="btn-primary">Calculate Total</button>
-            <button id="clearBtn" class="btn-danger">Clear All</button>
+            <div class="input-group">
+                <label>2. Gradebook (Scores)</label>
+                <input type="file" id="gradebookUpload" accept="image/*">
+            </div>
+            <button id="analyzeBtn" disabled>Analyze Documents</button>
         </div>
 
-        <div class="result-box">
-            <p id="resultDisplay">Total Grade: 0.00%</p>
-            <small id="weightWarning"></small>
+        <div id="loading" class="hidden">Processing images... This may take a moment.</div>
+
+        <div id="resultsSection" class="hidden">
+            <h2>Detected Data</h2>
+            <div id="dataTables"></div>
+            <div class="result-box">
+                <h3 id="finalGradeDisplay">Final Calculated Grade: --</h3>
+            </div>
         </div>
     </div>
-
     <script src="script.js"></script>
-
 </body>
 </html>
